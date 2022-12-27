@@ -1,4 +1,6 @@
 [book]
+title = "Cloud Docs"
+description = "The documentation for Cloud, a new Minecraft mod loader built for inter-loader compatibility and the end-user experience."
 authors = ["DaRubyMiner360"]
 language = "en"
 multilingual = false
@@ -10,7 +12,8 @@ create-missing = true
 use-default-preprocessors = true
 
 [output.html]
-mathjax-support = true
+default-theme = "ayu"
+preferred-dark-theme = "ayu"
 git-repository-url = "https://github.com/CloudLoaderMC/CloudDocs/tree/main/src"
 edit-url-template = "https://github.com/CloudLoaderMC/CloudDocs/edit/main/{path}"
 additional-css = ["./assets/mdbook-admonish.css"]

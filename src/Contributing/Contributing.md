@@ -40,7 +40,7 @@ Setting Up the Environment
 
 Depending on your favorite IDE, there is a different set of recommended steps you have to follow to successfully set up a development environment.
 
-It's no small feat to completely set Cloud up from scratch, but thankfully, Forge has created a tool called ForgeGradle meant to help setup FML, but since Cloud was originally based on Forge, we can use it.
+It's no small feat to completely set Cloud up from scratch, but thankfully, Forge has created a tool called ForgeGradle meant to help setup FML, but since Cloud was originally based on Forge, we can use it. Cloud also uses a fork of Fabric Loom, called *Cloud* Loom, to run 
 
 ### Eclipse
 

@@ -1,6 +1,7 @@
 # Summary
 
 [Home Page](./HomePage.md)
+[FAQ](./FAQ.md)
 
 # Compatibility
 - [Compatibility](./Compatibility/Compatibility.md)
