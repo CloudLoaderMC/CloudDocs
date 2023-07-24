@@ -31,7 +31,7 @@ heading-split-level = 2
 #command = "./mdbook-footnote"
 
 [preprocessor.admonish]
-#command = "./mdbook-admonish"
+command = "mdbook-admonish"
 assets_version = "2.0.0" # do not edit: managed by `mdbook-admonish install`
 
 [preprocessor.cloud]

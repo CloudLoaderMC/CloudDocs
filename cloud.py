@@ -22,7 +22,7 @@ if __name__ == '__main__':
         'docs_version': '0.0.1'
     }
 
-    url = 'https://meta.cloudmc.ml/v1/versions/loader/'
+    url = 'https://meta.cloudloader.org/v1/versions/loader/'
     try:
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         with urllib.request.urlopen(req) as url:

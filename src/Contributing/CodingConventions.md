@@ -16,7 +16,7 @@ Prerequisites: Eclipse {or IntelliJ} (3.7 or better is probably good), Git (any 
 
 ### Tips
 - Take your time. Make sure your code does what it's supposed to do and does it well. Your PR probably won't be accepted if it doesn't cover all the uses
-- Indent your code properly, and follow the conventions (take a look at other classes and read the code before editing). Space instead of tabs, open braces on a new line, etc. [ONLY IF IT IS A NEW CLASS NOT IF IT IS A PATCH TO A MINECRAFT CLASS](https://docs.cloudmc.ml/Contributing/CodingConventions.md#conventions-for-coding-patches-for-a-minecraft-class-javapatch). [Here](https://github.com/ForgeEssentials/ForgeEssentials/tree/1.12.2/develop/misc/)'re the IDEs formatters available if you want it.
+- Indent your code properly, and follow the conventions (take a look at other classes and read the code before editing). Space instead of tabs, open braces on a new line, etc. [ONLY IF IT IS A NEW CLASS NOT IF IT IS A PATCH TO A MINECRAFT CLASS](https://docs.cloudloader.org/Contributing/CodingConventions.md#conventions-for-coding-patches-for-a-minecraft-class-javapatch). [Here](https://github.com/ForgeEssentials/ForgeEssentials/tree/1.12.2/develop/misc/)'re the IDEs formatters available if you want it.
 - To update your repo to latest code from the official repository:
   1. If it's the first time, add a remote for the official repo (`git remote add upstream https://github.com/CloudLoaderMC/CloudLoader`)
   2. Get the updates (`git fetch upstream`), and make sure you're on master (`git checkout 1.19.x`)
