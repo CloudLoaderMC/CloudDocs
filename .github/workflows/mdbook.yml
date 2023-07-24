@@ -42,6 +42,7 @@ jobs:
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install mdbook-admonish
+          mkdir assets
           mdbook-admonish install --css-dir assets .
           cargo install mdbook-footnote
       - name: Setup Pages
