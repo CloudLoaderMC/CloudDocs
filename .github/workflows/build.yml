@@ -34,7 +34,7 @@ jobs:
           node-version: 21
       - name: Install dependencies
         run: |
-          pip install markdown
+          pip install markdown beautifulsoup4
           cd search_indexer/
           npm install elasticlunr
           cd ../
