@@ -236,20 +236,6 @@ def parse_references(content):
     return result
 
 
-# def add_header_links(content):
-#     result = content
-#
-#     h1_split = result.split('<h1')
-#     for i in range(len(h1_split)):
-#         if i == 0:
-#             continue
-#         split = h1_split[i].split('>', 1)
-#         split[1] = '<a class="header" href="#' + split[1] + '">'
-#
-#
-#     return result
-
-
 def parse_summary():
     global summary, index_path
 
@@ -408,7 +394,6 @@ def parse_html(path):
                 'name': headerOne.text,
                 'content': sectionOne.text,
                 'id': headerOne['id'],
-                # number?
                 'sub_items': [],
                 'path': path.replace(SOURCE_PATH + '/', '').replace('.md', '.html'),
                 'source_path': path.replace(SOURCE_PATH + '/', ''),
@@ -421,7 +406,6 @@ def parse_html(path):
                     'name': headerTwo.text,
                     'content': sectionTwo.text,
                     'id': headerTwo['id'],
-                    # number?
                     'sub_items': [],
                     'path': path.replace(SOURCE_PATH + '/', '').replace('.md', '.html'),
                     'source_path': path.replace(SOURCE_PATH + '/', ''),
@@ -434,7 +418,6 @@ def parse_html(path):
                         'name': headerThree.text,
                         'content': sectionThree.text,
                         'id': headerThree['id'],
-                        # number?
                         'sub_items': [],
                         'path': path.replace(SOURCE_PATH + '/', '').replace('.md', '.html'),
                         'source_path': path.replace(SOURCE_PATH + '/', ''),
@@ -449,7 +432,6 @@ def parse_html(path):
                     'name': headerThree.text,
                     'content': sectionThree.text,
                     'id': headerThree['id'],
-                    # number?
                     'sub_items': [],
                     'path': path.replace(SOURCE_PATH + '/', '').replace('.md', '.html'),
                     'source_path': path.replace(SOURCE_PATH + '/', ''),
