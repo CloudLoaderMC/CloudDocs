@@ -1,3 +1,7 @@
+<!--
+Contributing
+-->
+
 # Contributing
 
 If you have decided to contribute to Cloud, you will have to take some special steps to get started with developing. You can use the following guide to help you with your setup and get you started with improving Cloud!
@@ -5,7 +9,7 @@ If you have decided to contribute to Cloud, you will have to take some special s
 Forking and Cloning the Repository
 ----------------------------------
 
-Similarly to a lot major open source projects you will find, Cloud is hosted on [GitHub][github]. If you have contributed to another project before, you should know this process already and can skip to the next section.
+Similarly to a lot of major open source projects you will find, Cloud is hosted on [GitHub][github]. If you have contributed to another project before, you should know this process already and can skip to the next section.
 
 For the rest, here are two easy steps to get you started.
 
@@ -25,9 +29,9 @@ After forking the repository, it is time to get local access to actually make so
 
 Using your favorite git client, simply clone your fork into a directory of your choice. As general example, here is a command line snippet that should work on all correctly configured systems and clones the repository into a directory called "CloudLoader" under the current directory (note that you have to replace `<User>` with your username):
 
-```git clone https://github.com/<User>/CloudLoader```
+`git clone https://github.com/<User>/CloudLoader`
 
-# Checking out the Correct Branch
+### Checking out the Correct Branch
 
 Forking and cloning the repository are the only mandatory steps to develop for Cloud. However, to ease the process of creating Pull Requests for you, it is best to work with branches.
 

@@ -1,3 +1,7 @@
+<!--
+Pull Request Guidelines
+-->
+
 # Pull Request Guidelines
 
 Cloud aims to support as many mod loaders as possible, so sometimes simple things slip through the cracks causing some mods to be incompatible.
@@ -8,7 +12,7 @@ To make the best use of both your and the Cloud team's time, it is recommended t
 What Exactly is Cloud?
 ----------------------
 
-At a high level, Clou is a mod compatibility layer on top of Minecraft.
+At a high level, Cloud is a mod compatibility layer on top of Minecraft.
 Early mods edited Minecraft's code directly (like coremods do now), but they ran into conflicts with each other when they edited the same things. They also ran into issues when one mod changed behavior in ways that the other mods could not anticipate (like coremods do now), causing mysterious issues and lots of headaches.
 
 By using something like Cloud, mods can centralize common changes and avoid conflicts.

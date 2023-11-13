@@ -1,3 +1,7 @@
+<!--
+Hybrid Mods
+-->
+
 # Hybrid Mods
 
 Hybrid mods are mods that use multiple APIs. For example, a Forge mod that can use Fabric API, or vise-versa.

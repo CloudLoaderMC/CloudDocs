@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "elasticlunr": "^0.9.5"
+  }
+}

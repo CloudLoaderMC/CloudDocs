@@ -1,3 +1,7 @@
+<!--
+Compatibility
+-->
+
 # Compatibility
 
 **Cloud aims to support the following loaders' mods:**
@@ -17,5 +21,5 @@ In the future, Fabric will be replaced by Quilt (Quilt supports Fabric mods as w
 **Other Pages:**
 
 [Known Incompatibilities](./KnownIncompatibilities.md)
-\
+<br>
 [Mod-ID Aliases](./ModIDAliases.md)

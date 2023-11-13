@@ -1,6 +1,12 @@
-# mdBook
-book
-mdbook*
+# Cloud Files
+html/
+search_indexer/sections.json
+
+# Python Files
+__pycache__/
+
+# Node Files
+search_indexer/node_modules/
 
 # GitHub Webhooks
 hook

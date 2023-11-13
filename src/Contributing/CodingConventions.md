@@ -1,3 +1,7 @@
+<!--
+Coding Conventions
+-->
+
 # Coding Conventions
 
 Prerequisites: Eclipse {or IntelliJ} (3.7 or better is probably good), Git (any version, must be on system PATH))
