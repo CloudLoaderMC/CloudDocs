@@ -83,7 +83,7 @@ def fetch_cloud_variables():
                         ' but the latest version is ' + \
                         variables['version'] + \
                         '. Some things might have changed since the docs were last updated.'
-    except:
+    except Exception:
         variables['version'] = ''
         variables['version_text'] = ''
 
@@ -280,7 +280,7 @@ def parse_html(path):
     global sections
 
     content = ''
-    page_title = ''
+    page_title = 'Cloud Docs'
     print("Parsing: " + path)
     with open(path, 'r') as f:
         lines = f.read().split('\n')
@@ -290,8 +290,7 @@ def parse_html(path):
         content = '\n'.join(lines)
     content = parse_references(content)
     html = template
-    if page_title != '':
-        html = html.replace('<title>', '<title>' + page_title + ' - ')
+    html = html.replace('{{ TITLE }}', page_title)
     content = parse_variables(content)
     content = content.replace('[X]', '<input disabled="" type="checkbox" checked="">').replace(
         '[ ]', '<input disabled="" type="checkbox">')
@@ -384,8 +383,8 @@ def parse_html(path):
     html = html.replace('{{ CONTENT }}', content)
     html = html.replace('{{ SUMMARY }}', summary.replace(path.replace(SOURCE_PATH, '').replace('.md', '.html') + '" class="nav-link link-body-emphasis"',
                         path.replace(SOURCE_PATH, '').replace('.md', '.html') + '" class="nav-link active" aria-current="page"'))
+    soup = BeautifulSoup(content, 'html.parser')
     if path.replace(SOURCE_PATH, '') != '/404.md':
-        soup = BeautifulSoup(content, 'html.parser')
         sectionOnes = soup.select('.section1')
 
         for sectionOne in sectionOnes:
@@ -443,6 +442,10 @@ def parse_html(path):
                 sections.append(childOne)
                 for childTwo in childOne['sub_items']:
                     sections.append(childTwo)
+    for a in soup.findAll('a'):
+        if a['href'].endswith('.md'):
+            a['href'] = a['href'].replace('.md', '.html')
+    html = str(soup)
     return html
 
 
@@ -478,7 +481,7 @@ if __name__ == '__main__':
     if os.path.exists(TARGET_PATH):
         shutil.rmtree(TARGET_PATH)
 
-    fetch_cloud_variables()
+    # fetch_cloud_variables()
 
     tree = list_files(SOURCE_PATH)
     parse_summary()
