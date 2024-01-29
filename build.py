@@ -180,6 +180,15 @@ def add_element_classes(content, element, classes):
     return result
 
 
+def fix_links(content):
+    import re
+
+    pattern = r'(<a\s+(?:[^>]*?\s+)?href="([^"]*\.md)"(?:\s+[^>]*)?>)'
+    result = re.sub(pattern, lambda match: match.group(1).replace('.md', '.html'), content)
+
+    return result
+
+
 def apply_styling(content):
     result = content
 
@@ -198,6 +207,7 @@ def convert_markdown(content, style=True, handle_toc=False):
     result = content
     result = parse_references(result)
     result = md.convert(result)
+    result = fix_links(result)
     if style:
         result = apply_styling(result)
 
@@ -383,8 +393,8 @@ def parse_html(path):
     html = html.replace('{{ CONTENT }}', content)
     html = html.replace('{{ SUMMARY }}', summary.replace(path.replace(SOURCE_PATH, '').replace('.md', '.html') + '" class="nav-link link-body-emphasis"',
                         path.replace(SOURCE_PATH, '').replace('.md', '.html') + '" class="nav-link active" aria-current="page"'))
-    soup = BeautifulSoup(content, 'html.parser')
     if path.replace(SOURCE_PATH, '') != '/404.md':
+        soup = BeautifulSoup(content, 'html.parser')
         sectionOnes = soup.select('.section1')
 
         for sectionOne in sectionOnes:
@@ -442,10 +452,6 @@ def parse_html(path):
                 sections.append(childOne)
                 for childTwo in childOne['sub_items']:
                     sections.append(childTwo)
-    for a in soup.findAll('a'):
-        if a['href'].endswith('.md'):
-            a['href'] = a['href'].replace('.md', '.html')
-    html = str(soup)
     return html
 
 
