@@ -183,7 +183,7 @@ def add_element_classes(content, element, classes):
 def fix_links(content):
     import re
 
-    pattern = r'(<a\s+(?:[^>]*?\s+)?href="([^"]*\.md)"(?:\s+[^>]*)?>)'
+    pattern = r'(<a\s+(?:[^>]*?\s+)?href="([^"]*\.md(?:#[^"]+)?)?"(?:\s+[^>]*)?>)'
     result = re.sub(pattern, lambda match: match.group(1).replace('.md', '.html'), content)
 
     return result
