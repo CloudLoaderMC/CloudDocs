@@ -28,13 +28,13 @@ html[data-bs-theme=dark] {
  */
 
 .nav-masthead .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--bs-tertiary-color);
   border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link:hover,
 .nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-bottom-color: var(--bs-tertiary-color);
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -42,8 +42,8 @@ html[data-bs-theme=dark] {
 }
 
 .nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
+  color: var(--bs-emphasis-color);
+  border-bottom-color: var(--bs-emphasis-color);
 }
 
 .bd-placeholder-img {
