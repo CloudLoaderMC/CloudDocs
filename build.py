@@ -184,7 +184,8 @@ def fix_links(content):
     import re
 
     pattern = r'(<a\s+(?:[^>]*?\s+)?href="([^"]*\.md(?:#[^"]+)?)?"(?:\s+[^>]*)?>)'
-    result = re.sub(pattern, lambda match: match.group(1).replace('.md', '.html'), content)
+    result = re.sub(pattern, lambda match: match.group(
+        1).replace('.md', '.html'), content)
 
     return result
 
@@ -487,7 +488,7 @@ if __name__ == '__main__':
     if os.path.exists(TARGET_PATH):
         shutil.rmtree(TARGET_PATH)
 
-    # fetch_cloud_variables()
+    fetch_cloud_variables()
 
     tree = list_files(SOURCE_PATH)
     parse_summary()
