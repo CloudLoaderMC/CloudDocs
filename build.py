@@ -457,10 +457,14 @@ def parse_html(path):
 
 
 def write(tree, target_path):
+    if not os.path.exists(target_path):
+        os.makedirs(target_path)
     for key in tree.keys():
         value = tree[key]
         if value is not None:
-            os.makedirs(os.path.join(target_path, key))
+            print("Creating directory: " + os.path.join(target_path, key))
+            if not os.path.exists(os.path.join(target_path, key)):
+                os.makedirs(os.path.join(target_path, key))
             write(value, os.path.join(target_path, key))
         else:
             with open(os.path.join(target_path, key.replace('.md', '.html')), 'w') as f:
